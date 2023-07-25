@@ -1,0 +1,86 @@
+/* customButton pathname: src/components/Formulario.jsx */
+.customButton {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #9e4d46;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    outline: none;
+    /* Remove the default outline when the button is focused */
+}
+
+/* Add a smooth transition on hover */
+.customButton:hover {
+    background-color: #87170C;
+}
+
+/* Add a smooth transition on click */
+.customButton:active {
+    background-color: #87170C;
+    transform: scale(0.98);
+    /* Slightly scale down the button on click */
+}
+
+/* Disable the button pointer-events and adjust appearance when it's disabled */
+.customButton[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Add additional styles to make the button visually stand out */
+.customButton {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove default focus styles on the select element */
+.customButton:focus,
+.customButton:active:focus {
+    outline: none;
+}
+
+/* Pathname: src/components/Beverage.jsx */
+.receiptButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #863030;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: 1.4px solid #863030;
+    margin-top: 2rem;
+}
+
+.receiptButton:hover {
+    background-color: #863030;
+    color: white;
+}
+
+.receiptButton:active {
+    background-color: #863030;
+    color: white;
+}
+
+/* Favorite button */
+
+.heartButton {
+    grid-column: 2;
+    /* El botón del corazón se colocará en la segunda columna (derecha) */
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+.heartButton:hover {
+    cursor: pointer;
+}
