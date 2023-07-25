@@ -1,0 +1,113 @@
+/* Estilo para la animación del header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #94352d;
+    color: #fff;
+    height: 100vh;
+    transition: height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: lighter;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+/* Left to right h1 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Oculta el contenido y ajusta los estilos cuando el header está oculto */
+header.hide {
+    height: 8rem;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.header-title-hide {
+    margin-top: 3rem; /* Ajusta este valor según el espacio deseado */
+    font-size: 3rem;
+    font-weight: lighter;
+
+  }
+/* Muestra el contenido cuando el header está oculto */
+.container.hide {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back {
+    position: absolute;
+    top: 8.5rem;
+    left: 7rem;
+    cursor: pointer;
+    animation: fadeIn 1s ease;
+}
+
+.fav-text {
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease;
+}
+
+.nofav-text {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease;
+}
+
+/* Blur effect background in modalContent */
+.modalContent {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.modalHeader .modalTitle {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Estilos CSS */
+.modalHeader {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* Divide el espacio en dos columnas, una ocupando todo el espacio disponible y la otra se ajusta al contenido (el botón del corazón) */
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.modalTitleWrapper {
+    grid-column: 1;
+    /* El título se colocará en la primera columna (izquierda) */
+}
+
+.favorites-text {
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
